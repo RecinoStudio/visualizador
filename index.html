@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Participantes y Ganadores</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vinculación al archivo CSS -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js"></script>
+    <script src="index.js" type="module"></script>
+</head>
+<body>
+    <div class="header-images">
+        <!-- Última Rifa -->
+        <div class="image-container">
+            <img src="ultima.jpg" alt="Última Rifa">
+            <p>Último Sorteo</p>
+        </div>
+        
+        <!-- Rifa Actual -->
+        <div class="image-container">
+            <img src="actual.jpg" alt="Rifa Actual">
+            <p>Sorteo  Actual</p>
+        </div>
+        
+        <!-- Próxima Rifa -->
+        <div class="image-container">
+            <img src="prox.jpg" alt="Próxima Rifa">
+            <p>Próximo sorteo</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Lista de Participantes y Ganadores</h1>
+        
+        <!-- Sección de Ganadores -->
+        <section class="winners">
+            <h2>Ganadores</h2>
+            <p id="winners-total">0/5</p> <!-- Total de ganadores -->
+            <ul id="winners-list"></ul>
+        </section>
+        
+        <!-- Sección de Participantes -->
+        <section class="participants">
+            <h2>Participantes</h2>
+            <p id="participants-total">Total de participantes: 0</p> <!-- Total de participantes -->
+            <ul id="participants-list"></ul>
+        </section>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Todos los derechos reservados José Recinos 2024</p>
+    </footer>
+</body>
+</html>
