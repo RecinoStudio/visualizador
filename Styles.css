@@ -1,0 +1,255 @@
+/* Estilo general para el body */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Degradado de fondo */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+/* Estilo para el contenedor de imágenes en la parte superior */
+.header-images {
+    display: flex;
+    justify-content: center; /* Centra las imágenes */
+    align-items: center;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    padding: 20px 0;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Permite que las imágenes se acomoden en varias filas si es necesario */
+    gap: 20px; /* Espacio entre las imágenes */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+/* Ajustes en las imágenes */
+.image-container {
+    text-align: center;
+    width: 30%; /* Las imágenes ocuparán un 30% del ancho en pantallas grandes */
+    margin: 10px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+.image-container img {
+    width: 100%; /* La imagen ocupa el 100% del contenedor */
+    height: auto;
+    max-width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-container p {
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Estilo para la sección de participantes y ganadores */
+.container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #e0e0e0; /* Fondo gris suave */
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-top: 50px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+/* Encabezados */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Sección de Ganadores */
+.winners h2 {
+    background-color: #ffdb00; /* Amarillo brillante */
+    color: #333; /* Texto oscuro para contraste */
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 2rem;
+}
+
+/* Sección de Participantes */
+.participants h2 {
+    background-color: #2575fc;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Estilo para la lista de participantes y ganadores */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #f1f1f1; /* Fondo suave y claro */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Animación al pasar el mouse */
+li:hover {
+    transform: scale(1.05);
+}
+
+li span {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Estilo para la lista de ganadores */
+#winners-list {
+    background: #f1fdf1;
+}
+
+#winners-list li {
+    color: #ff6347; /* Color más llamativo: rojo tomate */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra para resaltar */
+    border-left: 5px solid #ff6347; /* Línea de borde con el color del texto */
+}
+
+/* Estilo para la lista de participantes */
+#participants-list {
+    background: #e8f3fe;
+}
+
+#participants-list li {
+    color: #2575fc;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* Sombra en la lista */
+section {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
+}
+
+/* Añadir una animación de fade-in para la entrada de las listas */
+ul li {
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Animación para hacer que los elementos aparezcan */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para el pie de página */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;  /* Centrado del texto */
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 1rem;
+    z-index: 1000;  /* Asegura que el pie de página esté encima del contenido */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Medias Queries para Responsividad */
+
+/* Para pantallas de menos de 768px (típicos teléfonos móviles) */
+@media screen and (max-width: 768px) {
+    .header-images {
+        flex-direction: column; /* Las imágenes se colocan en columna */
+        align-items: center; /* Asegura que las imágenes se centren */
+        justify-content: center; /* Alinea las imágenes al centro */
+        gap: 15px; /* Reduce el espacio entre las imágenes */
+        padding: 10px 0; /* Ajusta el padding */
+    }
+
+    .image-container {
+        width: 80%; /* Las imágenes ocupan un 80% del ancho en dispositivos móviles */
+    }
+
+    .container {
+        padding: 20px; /* Reducir el padding del contenedor en pantallas pequeñas */
+        margin-top: 20px; /* Reduce el margen superior */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    li {
+        font-size: 16px; /* Reducir el tamaño de fuente en dispositivos pequeños */
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Para pantallas de menos de 480px (teléfonos más pequeños) */
+@media screen and (max-width: 480px) {
+    .header-images {
+        padding: 10px 0;
+    }
+
+    .image-container img {
+        max-width: 120px; /* Hacer que las imágenes sean más pequeñas */
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    li {
+        font-size: 14px; /* Reducir aún más el tamaño de la fuente */
+    }
+}
